@@ -1,0 +1,5 @@
+firebase.bundle.js contains parts of the Firebase JavaScript SDK v10.14.1
+(firebase/app, firebase/auth, firebase/firestore), bundled with esbuild.
+Copyright Google LLC. Licensed under the Apache License, Version 2.0:
+https://www.apache.org/licenses/LICENSE-2.0
+Source: https://github.com/firebase/firebase-js-sdk
