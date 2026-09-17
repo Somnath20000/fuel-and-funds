@@ -131,7 +131,7 @@ const lsGet=k=>{try{return localStorage.getItem(k);}catch(e){return null;}};
 const lsSet=(k,v)=>{try{ v==null?localStorage.removeItem(k):localStorage.setItem(k,v);}catch(e){}};
 
 function realEntries(){return Object.values(state.months).flat();}
-function exampleMode(){return realEntries().length===0;}
+function exampleMode(){return false;}   // the installed app never shows sample entries
 function entries(){return exampleMode()?EXAMPLE:realEntries();}
 function readSettings(b){ return {monthlyBudget:Number(b.monthlyBudget)||DEFAULT_SETTINGS.monthlyBudget,pct:Object.assign({},DEFAULT_SETTINGS.pct,b.pct||{})}; }
 
@@ -678,7 +678,7 @@ if("serviceWorker" in navigator && (location.protocol==="https:"||location.hostn
 /* ---------- Boot ---------- */
 fillSettings();
 updateAccount();
-state.week=addDays(mondayOf(new Date()),-7);
+state.week=mondayOf(new Date());
 updateFoodBox();
 render();
 initBackend();

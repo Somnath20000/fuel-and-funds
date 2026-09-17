@@ -1,6 +1,6 @@
 // Offline support: the app shell is cached so Fuel & Funds opens without internet.
 // Bump VERSION whenever you upload changed files, so phones pick up the update.
-const VERSION = "ff-v1";
+const VERSION = "ff-v2";
 const SHELL = ["./", "./index.html", "./app.js", "./firebase-config.js", "./firebase.bundle.js",
   "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/maskable-512.png"];
 
